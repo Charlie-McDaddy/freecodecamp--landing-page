@@ -1,0 +1,209 @@
+@use "variables" as *;
+
+// HEADER
+#header {
+  position: sticky;
+  top: 0;
+  min-height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $charcoal;
+}
+
+.logo {
+  & img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 1rem;
+    color: $burnt-sienna;
+    border-radius: 10%;
+    padding: 0.5rem;
+  }
+}
+
+// NAV
+#nav-bar {
+  & ul {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 1rem;
+  }
+  & ul li {
+    list-style-type: none;
+    padding-left: 5rem;
+    font-size: 1.5rem;
+  }
+
+  & ul li a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+      color: $orange-yellow-crayola;
+    }
+  }
+}
+// End NAV
+
+// BANNER
+#banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/dist/images/pexels-photo-672358.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60rem;
+
+  &-title {
+    color: $orange-yellow-crayola;
+    font-size: 4rem;
+  }
+
+  &-subtitle {
+    color: $orange-yellow-crayola;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .form {
+    &-label {
+      color: $orange-yellow-crayola;
+    }
+
+    &-email {
+      max-width: 27.5rem;
+      width: 100%;
+      padding: 0.5rem;
+      background-color: $orange-yellow-crayola;
+      color: $charcoal;
+      border-radius: 0.5rem;
+    }
+
+    &-btn {
+      margin-top: 1rem;
+      max-width: 27.5rem;
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: $orange-yellow-crayola;
+      color: $charcoal;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $orange-yellow-crayola;
+        background-color: $charcoal;
+      }
+    }
+  }
+}
+// End BANNER
+// TOURS
+.tours {
+  background: $sandy-brown;
+  padding: 2rem 0 8rem 0;
+
+  &-title h1 {
+    color: $charcoal;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-left: 1rem;
+  }
+
+  &-container {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  & img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+}
+
+.tour {
+  &-item {
+    background-color: $persian-green;
+    color: $orange-yellow-crayola;
+    margin: 2rem auto;
+    border-radius: 1rem;
+  }
+}
+
+.text-container {
+  padding: 1rem 0.5rem 3rem 0.5rem;
+  border-radius: 0.5rem;
+
+  & h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  & p {
+    margin: 1.5rem 0 2.5rem 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 57.6rem) {
+  .tours-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+}
+
+@media screen and (min-width: 76.8rem) {
+  .tours-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+}
+// End TOURS
+// FOOTER
+.footer {
+  background-color: $charcoal;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &-text {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: $orange-yellow-crayola;
+    margin-bottom: 1rem;
+  }
+
+  &-icons {
+    font-size: 3rem;
+  }
+
+  .fab {
+    margin-right: 1rem;
+    color: $orange-yellow-crayola;
+    transition: transform 2s;
+
+    &:hover {
+      caption-side: $sandy-brown;
+      transform: translateY(-1.5rem);
+    }
+  }
+}
